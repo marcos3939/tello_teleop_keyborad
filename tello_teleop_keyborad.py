@@ -86,9 +86,6 @@ class KeyboardInput():
                 self.y = 0
                 self.z = 0
                 self.th = 0
-            elif key.char in speedBindings.keys():
-                self.speed = self.speed * speedBindings[key.char][0]
-                self.turn = self.turn * speedBindings[key.char][1]
 
             twist = geometry_msgs.msg.Twist()
             twist.linear.x = self.x * self.speed
